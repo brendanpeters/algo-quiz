@@ -24,481 +24,481 @@ PROBLEM_TO_CATEGORY = {
         'solution_summary': 'Create hash map with number -> list index. Iterate over nums. If diff between target and nums[i] is in the hashmap i != indices[i], then solution is [i, indices[i]]',
         'problem_statement': 'Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.\n\nYou may assume that every input has exactly one pair of indices i and j that satisfy the condition.\n\nReturn the answer with the smaller index first. ',
     },
-    # 'Group Anagrams': {
-    #     'category': 'arrays_hashing',
-    # },
-    # 'Top K Frequent Elements': {
-    #     'category': 'arrays_hashing',
-    # },
-    # 'Encode and Decode Strings': {
-    #     'category': 'arrays_hashing',
-    # },
-    # 'Product of Array Except Self': {
-    #     'category': 'arrays_hashing',
-    # },
-    # 'Valid Sudoku': {
-    #     'category': 'arrays_hashing',
-    # },
-    # 'Longest Consecutive Sequence': {
-    #     'category': 'arrays_hashing',
-    # },
+    'Group Anagrams': {
+        'category': 'arrays_hashing',
+    },
+    'Top K Frequent Elements': {
+        'category': 'arrays_hashing',
+    },
+    'Encode and Decode Strings': {
+        'category': 'arrays_hashing',
+    },
+    'Product of Array Except Self': {
+        'category': 'arrays_hashing',
+    },
+    'Valid Sudoku': {
+        'category': 'arrays_hashing',
+    },
+    'Longest Consecutive Sequence': {
+        'category': 'arrays_hashing',
+    },
 
-    # # two pointers
-    # 'Valid Palindrome': {
-    #     'category': 'two_pointers',
-    # },
-    # 'Two Sum II Input Array Is Sorted': {
-    #     'category': 'two_pointers',
-    # },
-    # '3Sum': {
-    #     'category': 'two_pointers',
-    # },
-    # 'Container With Most Water': {
-    #     'category': 'two_pointers',
-    # },
-    # 'Trapping Rain Water': {
-    #     'category': 'two_pointers',
-    # },
+    # two pointers
+    'Valid Palindrome': {
+        'category': 'two_pointers',
+    },
+    'Two Sum II Input Array Is Sorted': {
+        'category': 'two_pointers',
+    },
+    '3Sum': {
+        'category': 'two_pointers',
+    },
+    'Container With Most Water': {
+        'category': 'two_pointers',
+    },
+    'Trapping Rain Water': {
+        'category': 'two_pointers',
+    },
 
-    # # sliding window
-    # 'Best Time to Buy And Sell Stock': {
-    #     'category': 'sliding_window',
-    # },
-    # 'Longest Substring Without Repeating Characters': {
-    #     'category': 'sliding_window',
-    # },
-    # 'Longest Repeating Character Replacement': {
-    #     'category': 'sliding_window',
-    # },
-    # 'Permutation In String': {
-    #     'category': 'sliding_window',
-    # },
-    # 'Minimum Window Substring': {
-    #     'category': 'sliding_window',
-    # },
-    # 'Sliding Window Maximum': {
-    #     'category': 'sliding_window',
-    # },
+    # sliding window
+    'Best Time to Buy And Sell Stock': {
+        'category': 'sliding_window',
+    },
+    'Longest Substring Without Repeating Characters': {
+        'category': 'sliding_window',
+    },
+    'Longest Repeating Character Replacement': {
+        'category': 'sliding_window',
+    },
+    'Permutation In String': {
+        'category': 'sliding_window',
+    },
+    'Minimum Window Substring': {
+        'category': 'sliding_window',
+    },
+    'Sliding Window Maximum': {
+        'category': 'sliding_window',
+    },
 
-    # # stack
-    # 'Valid Parentheses': {
-    #     'category': 'stack',
-    # },
-    # 'Min Stack': {
-    #     'category': 'stack',
-    # },
-    # 'Evaluate Reverse Polish Notation': {
-    #     'category': 'stack',
-    # },
-    # 'Daily Temperatures': {
-    #     'category': 'stack',
-    # },
-    # 'Car Fleet': {
-    #     'category': 'stack',
-    # },
-    # 'Largest Rectangle In Histogram': {
-    #     'category': 'stack',
-    # },
+    # stack
+    'Valid Parentheses': {
+        'category': 'stack',
+    },
+    'Min Stack': {
+        'category': 'stack',
+    },
+    'Evaluate Reverse Polish Notation': {
+        'category': 'stack',
+    },
+    'Daily Temperatures': {
+        'category': 'stack',
+    },
+    'Car Fleet': {
+        'category': 'stack',
+    },
+    'Largest Rectangle In Histogram': {
+        'category': 'stack',
+    },
 
-    # # binary search
-    # 'Binary Search': {
-    #     'category': 'binary_search',
-    # },
-    # 'Search a 2D Matrix': {
-    #     'category': 'binary_search',
-    # },
-    # 'Koko Eating Bananas': {
-    #     'category': 'binary_search',
-    # },
-    # 'Find Minimum In Rotated Sorted Array': {
-    #     'category': 'binary_search',
-    # },
-    # 'Search In Rotated Sorted Array': {
-    #     'category': 'binary_search',
-    # },
-    # 'Time Based Key Value Store': {
-    #     'category': 'binary_search',
-    # },
-    # 'Median of Two Sorted Arrays': {
-    #     'category': 'binary_search',
-    # },
+    # binary search
+    'Binary Search': {
+        'category': 'binary_search',
+    },
+    'Search a 2D Matrix': {
+        'category': 'binary_search',
+    },
+    'Koko Eating Bananas': {
+        'category': 'binary_search',
+    },
+    'Find Minimum In Rotated Sorted Array': {
+        'category': 'binary_search',
+    },
+    'Search In Rotated Sorted Array': {
+        'category': 'binary_search',
+    },
+    'Time Based Key Value Store': {
+        'category': 'binary_search',
+    },
+    'Median of Two Sorted Arrays': {
+        'category': 'binary_search',
+    },
 
-    # # linked list
-    # 'Reverse Linked List': {
-    #     'category': 'linked_list',
-    # },
-    # 'Merge Two Sorted Lists': {
-    #     'category': 'linked_list',
-    # },
-    # 'Linked List Cycle': {
-    #     'category': 'linked_list',
-    # },
-    # 'Reorder List': {
-    #     'category': 'linked_list',
-    # },
-    # 'Remove Nth Node From End of List': {
-    #     'category': 'linked_list',
-    # },
-    # 'Copy List With Random Pointer': {
-    #     'category': 'linked_list',
-    # },
-    # 'Add Two Numbers': {
-    #     'category': 'linked_list',
-    # },
-    # 'Find The Duplicate Number': {
-    #     'category': 'linked_list',
-    # },
-    # 'LRU Cache': {
-    #     'category': 'linked_list',
-    # },
-    # 'Merge K Sorted Lists': {
-    #     'category': 'linked_list',
-    # },
-    # 'Reverse Nodes In K Group': {
-    #     'category': 'linked_list',
-    # },
+    # linked list
+    'Reverse Linked List': {
+        'category': 'linked_list',
+    },
+    'Merge Two Sorted Lists': {
+        'category': 'linked_list',
+    },
+    'Linked List Cycle': {
+        'category': 'linked_list',
+    },
+    'Reorder List': {
+        'category': 'linked_list',
+    },
+    'Remove Nth Node From End of List': {
+        'category': 'linked_list',
+    },
+    'Copy List With Random Pointer': {
+        'category': 'linked_list',
+    },
+    'Add Two Numbers': {
+        'category': 'linked_list',
+    },
+    'Find The Duplicate Number': {
+        'category': 'linked_list',
+    },
+    'LRU Cache': {
+        'category': 'linked_list',
+    },
+    'Merge K Sorted Lists': {
+        'category': 'linked_list',
+    },
+    'Reverse Nodes In K Group': {
+        'category': 'linked_list',
+    },
 
-    # # trees
-    # 'Invert Binary Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Maximum Depth of Binary Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Diameter of Binary Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Balanced Binary Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Same Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Subtree of Another Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Lowest Common Ancestor of a Binary Search Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Binary Tree Level Order Traversal': {
-    #     'category': 'trees',
-    # },
-    # 'Binary Tree Right Side View': {
-    #     'category': 'trees',
-    # },
-    # 'Count Good Nodes In Binary Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Validate Binary Search Tree': {
-    #     'category': 'trees',
-    # },
-    # 'Kth Smallest Element In a Bst': {
-    #     'category': 'trees',
-    # },
-    # 'Construct Binary Tree From Preorder And Inorder Traversal': {
-    #     'category': 'trees',
-    # },
-    # 'Binary Tree Maximum Path Sum': {
-    #     'category': 'trees',
-    # },
-    # 'Serialize And Deserialize Binary Tree': {
-    #     'category': 'trees',
-    # },
+    # trees
+    'Invert Binary Tree': {
+        'category': 'trees',
+    },
+    'Maximum Depth of Binary Tree': {
+        'category': 'trees',
+    },
+    'Diameter of Binary Tree': {
+        'category': 'trees',
+    },
+    'Balanced Binary Tree': {
+        'category': 'trees',
+    },
+    'Same Tree': {
+        'category': 'trees',
+    },
+    'Subtree of Another Tree': {
+        'category': 'trees',
+    },
+    'Lowest Common Ancestor of a Binary Search Tree': {
+        'category': 'trees',
+    },
+    'Binary Tree Level Order Traversal': {
+        'category': 'trees',
+    },
+    'Binary Tree Right Side View': {
+        'category': 'trees',
+    },
+    'Count Good Nodes In Binary Tree': {
+        'category': 'trees',
+    },
+    'Validate Binary Search Tree': {
+        'category': 'trees',
+    },
+    'Kth Smallest Element In a Bst': {
+        'category': 'trees',
+    },
+    'Construct Binary Tree From Preorder And Inorder Traversal': {
+        'category': 'trees',
+    },
+    'Binary Tree Maximum Path Sum': {
+        'category': 'trees',
+    },
+    'Serialize And Deserialize Binary Tree': {
+        'category': 'trees',
+    },
 
-    # # heap
-    # 'Kth Largest Element In a Stream': {
-    #     'category': 'heap',
-    # },
-    # 'Last Stone Weight': {
-    #     'category': 'heap',
-    # },
-    # 'K Closest Points to Origin': {
-    #     'category': 'heap',
-    # },
-    # 'Kth Largest Element In An Array': {
-    #     'category': 'heap',
-    # },
-    # 'Task Scheduler': {
-    #     'category': 'heap',
-    # },
-    # 'Design Twitter': {
-    #     'category': 'heap',
-    # },
-    # 'Find Median From Data Stream': {
-    #     'category': 'heap',
-    # },
+    # heap
+    'Kth Largest Element In a Stream': {
+        'category': 'heap',
+    },
+    'Last Stone Weight': {
+        'category': 'heap',
+    },
+    'K Closest Points to Origin': {
+        'category': 'heap',
+    },
+    'Kth Largest Element In An Array': {
+        'category': 'heap',
+    },
+    'Task Scheduler': {
+        'category': 'heap',
+    },
+    'Design Twitter': {
+        'category': 'heap',
+    },
+    'Find Median From Data Stream': {
+        'category': 'heap',
+    },
     
-    # # backtracking
-    # 'Subsets': {
-    #     'category': 'backtracking',
-    # },
-    # 'Combination Sum': {
-    #     'category': 'backtracking',
-    # },
-    # 'Combination Sum II': {
-    #     'category': 'backtracking',
-    # },
-    # 'Permutations': {
-    #     'category': 'backtracking',
-    # },
-    # 'Subsets II': {
-    #     'category': 'backtracking',
-    # },
-    # 'Generate Parentheses': {
-    #     'category': 'backtracking',
-    # },
-    # 'Word Search': {
-    #     'category': 'backtracking',
-    # },
-    # 'Palindrome Partitioning': {
-    #     'category': 'backtracking',
-    # },
-    # 'Letter Combinations of a Phone Number': {
-    #     'category': 'backtracking',
-    # },
-    # 'N Queens': {
-    #     'category': 'backtracking',
-    # },
+    # backtracking
+    'Subsets': {
+        'category': 'backtracking',
+    },
+    'Combination Sum': {
+        'category': 'backtracking',
+    },
+    'Combination Sum II': {
+        'category': 'backtracking',
+    },
+    'Permutations': {
+        'category': 'backtracking',
+    },
+    'Subsets II': {
+        'category': 'backtracking',
+    },
+    'Generate Parentheses': {
+        'category': 'backtracking',
+    },
+    'Word Search': {
+        'category': 'backtracking',
+    },
+    'Palindrome Partitioning': {
+        'category': 'backtracking',
+    },
+    'Letter Combinations of a Phone Number': {
+        'category': 'backtracking',
+    },
+    'N Queens': {
+        'category': 'backtracking',
+    },
 
-    # # tries
-    # 'Implement Trie Prefix Tree': {
-    #     'category': 'tries',
-    # },
-    # 'Design Add And Search Words Data Structure': {
-    #     'category': 'tries',
-    # },
-    # 'Word Search II': {
-    #     'category': 'tries',
-    # },
+    # tries
+    'Implement Trie Prefix Tree': {
+        'category': 'tries',
+    },
+    'Design Add And Search Words Data Structure': {
+        'category': 'tries',
+    },
+    'Word Search II': {
+        'category': 'tries',
+    },
 
-    # # graphs
-    # 'Number of Islands': {
-    #     'category': 'graphs',
-    # },
-    # 'Max Area of Island': {
-    #     'category': 'graphs',
-    # },
-    # 'Clone Graph': {
-    #     'category': 'graphs',
-    # },
-    # 'Walls And Gates': {
-    #     'category': 'graphs',
-    # },
-    # 'Rotting Oranges': {
-    #     'category': 'graphs',
-    # },
-    # 'Pacific Atlantic Water Flow': {
-    #     'category': 'graphs',
-    # },
-    # 'Surrounded Regions': {
-    #     'category': 'graphs',
-    # },
-    # 'Course Schedule': {
-    #     'category': 'graphs',
-    # },
-    # 'Course Schedule II': {
-    #     'category': 'graphs',
-    # },
-    # 'Graph Valid Tree': {
-    #     'category': 'graphs',
-    # },
-    # 'Number of Connected Components In An Undirected Graph': {
-    #     'category': 'graphs',
-    # },
-    # 'Redundant Connection': {
-    #     'category': 'graphs',
-    # },
-    # 'Word Ladder': {
-    #     'category': 'graphs',
-    # },
+    # graphs
+    'Number of Islands': {
+        'category': 'graphs',
+    },
+    'Max Area of Island': {
+        'category': 'graphs',
+    },
+    'Clone Graph': {
+        'category': 'graphs',
+    },
+    'Walls And Gates': {
+        'category': 'graphs',
+    },
+    'Rotting Oranges': {
+        'category': 'graphs',
+    },
+    'Pacific Atlantic Water Flow': {
+        'category': 'graphs',
+    },
+    'Surrounded Regions': {
+        'category': 'graphs',
+    },
+    'Course Schedule': {
+        'category': 'graphs',
+    },
+    'Course Schedule II': {
+        'category': 'graphs',
+    },
+    'Graph Valid Tree': {
+        'category': 'graphs',
+    },
+    'Number of Connected Components In An Undirected Graph': {
+        'category': 'graphs',
+    },
+    'Redundant Connection': {
+        'category': 'graphs',
+    },
+    'Word Ladder': {
+        'category': 'graphs',
+    },
 
-    # # advanced graphs
-    # 'Network Delay Time': {
-    #     'category': 'graphs',
-    # },
-    # 'Reconstruct Itinerary': {
-    #     'category': 'graphs',
-    # },
-    # 'Min Cost to Connect All Points': {
-    #     'category': 'graphs',
-    # },
-    # 'Swim In Rising Water': {
-    #     'category': 'graphs',
-    # },
-    # 'Alien Dictionary': {
-    #     'category': 'graphs',
-    # },
-    # 'Cheapest Flights Within K Stops': {
-    #     'category': 'graphs',
-    # },
+    # advanced graphs
+    'Network Delay Time': {
+        'category': 'graphs',
+    },
+    'Reconstruct Itinerary': {
+        'category': 'graphs',
+    },
+    'Min Cost to Connect All Points': {
+        'category': 'graphs',
+    },
+    'Swim In Rising Water': {
+        'category': 'graphs',
+    },
+    'Alien Dictionary': {
+        'category': 'graphs',
+    },
+    'Cheapest Flights Within K Stops': {
+        'category': 'graphs',
+    },
 
-    # # 1D dynamic programming
-    # 'Climbing Stairs': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Min Cost Climbing Stairs': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'House Robber': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'House Robber II': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Longest Palindromic Substring': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Palindromic Substrings': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Decode Ways': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Coin Change': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Maximum Product Subarray': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Word Break': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Longest Increasing Subsequence': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Partition Equal Subset Sum': {
-    #     'category': 'dynamic_programming',
-    # },
+    # 1D dynamic programming
+    'Climbing Stairs': {
+        'category': 'dynamic_programming',
+    },
+    'Min Cost Climbing Stairs': {
+        'category': 'dynamic_programming',
+    },
+    'House Robber': {
+        'category': 'dynamic_programming',
+    },
+    'House Robber II': {
+        'category': 'dynamic_programming',
+    },
+    'Longest Palindromic Substring': {
+        'category': 'dynamic_programming',
+    },
+    'Palindromic Substrings': {
+        'category': 'dynamic_programming',
+    },
+    'Decode Ways': {
+        'category': 'dynamic_programming',
+    },
+    'Coin Change': {
+        'category': 'dynamic_programming',
+    },
+    'Maximum Product Subarray': {
+        'category': 'dynamic_programming',
+    },
+    'Word Break': {
+        'category': 'dynamic_programming',
+    },
+    'Longest Increasing Subsequence': {
+        'category': 'dynamic_programming',
+    },
+    'Partition Equal Subset Sum': {
+        'category': 'dynamic_programming',
+    },
 
-    # # 2D dynamic programming
-    # 'Unique Paths': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Longest Common Subsequence': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Best Time to Buy And Sell Stock With Cooldown': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Coin Change II': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Target Sum': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Interleaving String': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Longest Increasing Path In a Matrix': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Distinct Subsequences': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Edit Distance': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Burst Balloons': {
-    #     'category': 'dynamic_programming',
-    # },
-    # 'Regular Expression Matching': {
-    #     'category': 'dynamic_programming',
-    # },
+    # 2D dynamic programming
+    'Unique Paths': {
+        'category': 'dynamic_programming',
+    },
+    'Longest Common Subsequence': {
+        'category': 'dynamic_programming',
+    },
+    'Best Time to Buy And Sell Stock With Cooldown': {
+        'category': 'dynamic_programming',
+    },
+    'Coin Change II': {
+        'category': 'dynamic_programming',
+    },
+    'Target Sum': {
+        'category': 'dynamic_programming',
+    },
+    'Interleaving String': {
+        'category': 'dynamic_programming',
+    },
+    'Longest Increasing Path In a Matrix': {
+        'category': 'dynamic_programming',
+    },
+    'Distinct Subsequences': {
+        'category': 'dynamic_programming',
+    },
+    'Edit Distance': {
+        'category': 'dynamic_programming',
+    },
+    'Burst Balloons': {
+        'category': 'dynamic_programming',
+    },
+    'Regular Expression Matching': {
+        'category': 'dynamic_programming',
+    },
 
-    # # greedy
-    # 'Maximum Subarray': {
-    #     'category': 'greedy',
-    # },
-    # 'Jump Game': {
-    #     'category': 'greedy',
-    # },
-    # 'Jump Game II': {
-    #     'category': 'greedy',
-    # },
-    # 'Gas Station': {
-    #     'category': 'greedy',
-    # },
-    # 'Hand of Straights': {
-    #     'category': 'greedy',
-    # },
-    # 'Merge Triplets to Form Target Triplet': {
-    #     'category': 'greedy',
-    # },
-    # 'Partition Labels': {
-    #     'category': 'greedy',
-    # },
-    # 'Valid Parenthesis String': {
-    #     'category': 'greedy',
-    # },
+    # greedy
+    'Maximum Subarray': {
+        'category': 'greedy',
+    },
+    'Jump Game': {
+        'category': 'greedy',
+    },
+    'Jump Game II': {
+        'category': 'greedy',
+    },
+    'Gas Station': {
+        'category': 'greedy',
+    },
+    'Hand of Straights': {
+        'category': 'greedy',
+    },
+    'Merge Triplets to Form Target Triplet': {
+        'category': 'greedy',
+    },
+    'Partition Labels': {
+        'category': 'greedy',
+    },
+    'Valid Parenthesis String': {
+        'category': 'greedy',
+    },
 
-    # # intervals
-    # 'Insert Interval': {
-    #     'category': 'intervals',
-    # },
-    # 'Merge Intervals': {
-    #     'category': 'intervals',
-    # },
-    # 'Non Overlapping Intervals': {
-    #     'category': 'intervals',
-    # },
-    # 'Meeting Rooms': {
-    #     'category': 'intervals',
-    # },
-    # 'Meeting Rooms II': {
-    #     'category': 'intervals',
-    # },
-    # 'Minimum Interval to Include Each Query': {
-    #     'category': 'intervals',
-    # },
+    # intervals
+    'Insert Interval': {
+        'category': 'intervals',
+    },
+    'Merge Intervals': {
+        'category': 'intervals',
+    },
+    'Non Overlapping Intervals': {
+        'category': 'intervals',
+    },
+    'Meeting Rooms': {
+        'category': 'intervals',
+    },
+    'Meeting Rooms II': {
+        'category': 'intervals',
+    },
+    'Minimum Interval to Include Each Query': {
+        'category': 'intervals',
+    },
 
-    # # math & geometry
-    # 'Rotate Image': {
-    #     'category': 'math',
-    # },
-    # 'Spiral Matrix': {
-    #     'category': 'math',
-    # },
-    # 'Set Matrix Zeroes': {
-    #     'category': 'math',
-    # },
-    # 'Happy Number': {
-    #     'category': 'math',
-    # },
-    # 'Plus One': {
-    #     'category': 'math',
-    # },
-    # 'Pow(x, n)': {
-    #     'category': 'math',
-    # },
-    # 'Multiply Strings': {
-    #     'category': 'math',
-    # },
-    # 'Detect Squares': {
-    #     'category': 'math',
-    # },
+    # math & geometry
+    'Rotate Image': {
+        'category': 'math',
+    },
+    'Spiral Matrix': {
+        'category': 'math',
+    },
+    'Set Matrix Zeroes': {
+        'category': 'math',
+    },
+    'Happy Number': {
+        'category': 'math',
+    },
+    'Plus One': {
+        'category': 'math',
+    },
+    'Pow(x, n)': {
+        'category': 'math',
+    },
+    'Multiply Strings': {
+        'category': 'math',
+    },
+    'Detect Squares': {
+        'category': 'math',
+    },
 
-    # # bit manipulation
-    # 'Single Number': {
-    #     'category': 'bits',
-    # },
-    # 'Number of 1 Bits': {
-    #     'category': 'bits',
-    # },
-    # 'Counting Bits': {
-    #     'category': 'bits',
-    # },
-    # 'Reverse Bits': {
-    #     'category': 'bits',
-    # },
-    # 'Missing Number': {
-    #     'category': 'bits',
-    # },
-    # 'Sum of Two Integers': {
-    #     'category': 'bits',
-    # },
-    # 'Reverse Integer': {
-    #     'category': 'bits',
-    # },
+    # bit manipulation
+    'Single Number': {
+        'category': 'bits',
+    },
+    'Number of 1 Bits': {
+        'category': 'bits',
+    },
+    'Counting Bits': {
+        'category': 'bits',
+    },
+    'Reverse Bits': {
+        'category': 'bits',
+    },
+    'Missing Number': {
+        'category': 'bits',
+    },
+    'Sum of Two Integers': {
+        'category': 'bits',
+    },
+    'Reverse Integer': {
+        'category': 'bits',
+    },
 }
 
 CATEGORIES = {
