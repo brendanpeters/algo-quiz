@@ -13,34 +13,55 @@ PROBLEM_TO_CATEGORY = {
         'category': 'arrays_hashing',
         'solution_summary': 'Store each number in hash set. If number already exists in set, return False. If you make to to the end, return True',
         'problem_statement': 'Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.',
+        'level': 'easy',
     },
     'Valid Anagram': {
         'category': 'arrays_hashing',
         'solution_summary': 'Make hash maps to count char frequencies for each string. Return true if sets are equal',
         'problem_statement': 'Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.\n\nAn anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.',
+        'level': 'easy',
     },
     'Two Sum': {
         'category': 'arrays_hashing',
         'solution_summary': 'Create hash map with number -> list index. Iterate over nums. If diff between target and nums[i] is in the hashmap i != indices[i], then solution is [i, indices[i]]',
         'problem_statement': 'Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.\n\nYou may assume that every input has exactly one pair of indices i and j that satisfy the condition.\n\nReturn the answer with the smaller index first. ',
+        'level': 'easy',
     },
     'Group Anagrams': {
         'category': 'arrays_hashing',
+        'problem_statement': 'Given an array of strings strs, group all anagrams together into sublists. You may return the output in any order.\n\nAn anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.',
+        'solution_summary': 'Create hasmap tuple -> list. One entry per anagram. For each string, create a length 26 array of counts of letters. Convert to tuple. If tuple already exists in hashmap, add to list. Otherwise, add to hashamp with list containing current word.',
+        'level': 'medium',
     },
     'Top K Frequent Elements': {
         'category': 'arrays_hashing',
+        'problem_statement': 'Given an integer array nums and an integer k, return the k most frequent elements within the array.\n\nThe test cases are generated such that the answer is always unique.\n\nYou may return the output in any order.',
+        'solution_summary': 'Group numbers into buckets based on frequency, using 2D array. Iterate backwards through array to start with highest freq bucket. Add numbers in order until the length of result equals k',
+        'level': 'medium',
     },
     'Encode and Decode Strings': {
         'category': 'arrays_hashing',
+        'problem_statement': 'Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.\n\nPlease implement encode and decode',
+        'solution_summary': 'We can use an encoding approach where we start with a number representing the length of the string, followed by a separator character (let\'s use # for simplicity), and then the string itself. To decode, we read the number until we reach a #, then use that number to read the specified number of characters as the string.'
+        'level': 'medium',
     },
     'Product of Array Except Self': {
         'category': 'arrays_hashing',
+        'problem_statement': 'Given an integer array nums, return an array output where output[i] is the product of all the elements of nums except nums[i].\n\nEach product is guaranteed to fit in a 32-bit integer.\n\nFollow-up: Could you solve it in O(n)O(n) time without using the division operation?,'
+        'solution_summary': 'Use prefix/suffix arrays. Prefix[i] is the product of all nums to left, suffix[i] is the product of all nums to right. Result is element-wise multiplication of prefix and suffix.',
+        'level': 'medium',
     },
     'Valid Sudoku': {
         'category': 'arrays_hashing',
+        'problem_statement': 'You are given a 9 x 9 Sudoku board board. A Sudoku board is valid if the following rules are followed:\n\n    Each row must contain the digits 1-9 without duplicates.\n    Each column must contain the digits 1-9 without duplicates.\n    Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without duplicates.\n\nReturn true if the Sudoku board is valid, otherwise return false.\n\nNote: A board does not need to be full or be solvable to be valid.,'
+        'solution_summary': 'Scan every element in matrix. Use hashmaps of sets to track the values in each row, col, and square.',
+        'level': 'medium',
     },
     'Longest Consecutive Sequence': {
         'category': 'arrays_hashing',
+        'problem_statement': 'Given an array of integers nums, return the length of the longest consecutive sequence of elements that can be formed.\n\nA consecutive sequence is a sequence of elements in which each element is exactly 1 greater than the previous element. The elements do not have to be consecutive in the original array.\n\nYou must write an algorithm that runs in O(n) time.,'
+        'solution_summary': 'Put all nums in a hash set. For each number in set, if num - 1 is in the hashset, continue. Otherwise, check for streak by incrementing curNum by 1 and checking if it\'s in the hash set.',
+        'level': 'medium',
     },
 
     # two pointers
