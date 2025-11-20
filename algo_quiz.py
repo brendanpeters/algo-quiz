@@ -1,5 +1,7 @@
 import click
 import random
+import getopt
+import sys
 
 MAP = {
     'a': 1,
@@ -42,24 +44,24 @@ PROBLEM_TO_CATEGORY = {
     'Encode and Decode Strings': {
         'category': 'arrays_hashing',
         'problem_statement': 'Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.\n\nPlease implement encode and decode',
-        'solution_summary': 'We can use an encoding approach where we start with a number representing the length of the string, followed by a separator character (let\'s use # for simplicity), and then the string itself. To decode, we read the number until we reach a #, then use that number to read the specified number of characters as the string.'
+        'solution_summary': 'We can use an encoding approach where we start with a number representing the length of the string, followed by a separator character (let\'s use # for simplicity), and then the string itself. To decode, we read the number until we reach a #, then use that number to read the specified number of characters as the string.',
         'level': 'medium',
     },
     'Product of Array Except Self': {
         'category': 'arrays_hashing',
-        'problem_statement': 'Given an integer array nums, return an array output where output[i] is the product of all the elements of nums except nums[i].\n\nEach product is guaranteed to fit in a 32-bit integer.\n\nFollow-up: Could you solve it in O(n)O(n) time without using the division operation?,'
+        'problem_statement': 'Given an integer array nums, return an array output where output[i] is the product of all the elements of nums except nums[i].\n\nEach product is guaranteed to fit in a 32-bit integer.\n\nFollow-up: Could you solve it in O(n)O(n) time without using the division operation?',
         'solution_summary': 'Use prefix/suffix arrays. Prefix[i] is the product of all nums to left, suffix[i] is the product of all nums to right. Result is element-wise multiplication of prefix and suffix.',
         'level': 'medium',
     },
     'Valid Sudoku': {
         'category': 'arrays_hashing',
-        'problem_statement': 'You are given a 9 x 9 Sudoku board board. A Sudoku board is valid if the following rules are followed:\n\n    Each row must contain the digits 1-9 without duplicates.\n    Each column must contain the digits 1-9 without duplicates.\n    Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without duplicates.\n\nReturn true if the Sudoku board is valid, otherwise return false.\n\nNote: A board does not need to be full or be solvable to be valid.,'
+        'problem_statement': 'You are given a 9 x 9 Sudoku board board. A Sudoku board is valid if the following rules are followed:\n\n    Each row must contain the digits 1-9 without duplicates.\n    Each column must contain the digits 1-9 without duplicates.\n    Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without duplicates.\n\nReturn true if the Sudoku board is valid, otherwise return false.\n\nNote: A board does not need to be full or be solvable to be valid.',
         'solution_summary': 'Scan every element in matrix. Use hashmaps of sets to track the values in each row, col, and square.',
         'level': 'medium',
     },
     'Longest Consecutive Sequence': {
         'category': 'arrays_hashing',
-        'problem_statement': 'Given an array of integers nums, return the length of the longest consecutive sequence of elements that can be formed.\n\nA consecutive sequence is a sequence of elements in which each element is exactly 1 greater than the previous element. The elements do not have to be consecutive in the original array.\n\nYou must write an algorithm that runs in O(n) time.,'
+        'problem_statement': 'Given an array of integers nums, return the length of the longest consecutive sequence of elements that can be formed.\n\nA consecutive sequence is a sequence of elements in which each element is exactly 1 greater than the previous element. The elements do not have to be consecutive in the original array.\n\nYou must write an algorithm that runs in O(n) time.',
         'solution_summary': 'Put all nums in a hash set. For each number in set, if num - 1 is in the hashset, continue. Otherwise, check for streak by incrementing curNum by 1 and checking if it\'s in the hash set.',
         'level': 'medium',
     },
@@ -67,18 +69,33 @@ PROBLEM_TO_CATEGORY = {
     # two pointers
     'Valid Palindrome': {
         'category': 'two_pointers',
+        'problem_statement': 'Given a string s, return true if it is a palindrome, otherwise return false.\n\nA palindrome is a string that reads the same forward and backward. It is also case-insensitive and ignores all non-alphanumeric characters.\n\nNote: Alphanumeric characters consist of letters (A-Z, a-z) and numbers (0-9).',
+        'solution_summary': 'Create left and right pointers. Shift each pointer to next alphanumeric character. If there is a mismatch, return false. If you make it all the way through the string, return true.',
+        'level': 'easy',
     },
     'Two Sum II Input Array Is Sorted': {
         'category': 'two_pointers',
+        'problem_statement': 'Given an array of integers numbers that is sorted in non-decreasing order.\n\nReturn the indices (1-indexed) of two numbers, [index1, index2], such that they add up to a given target number target and index1 < index2. Note that index1 and index2 cannot be equal, therefore you may not use the same element twice.\n\nThere will always be exactly one valid solution.\n\nYour solution must use O(1)O(1) additional space.',
+        'solution_summary': 'Start with left = 0, right = len(nums) - 1. While loop on left < right. Each iteration, get current sum. If sum > target, decrement right. Is sum < target, increment left. If sum == target, return [left, right]. If loop exits without match, return []',
+        'level': 'medium',
     },
     '3Sum': {
         'category': 'two_pointers',
+        'problem_statement': 'Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] where nums[i] + nums[j] + nums[k] == 0, and the indices i, j and k are all distinct.\n\nThe output should not contain any duplicate triplets. You may return the output and the triplets in any order.',
+        'solution_summary': 'Sort nums. Loop over nums. If a > 0, break loop, because we won\'t encounter any more negative numbers to add to zero. If current number is same as previous number, continue loop, because we are not supposed to have duplicates. Then problem basically becomes 2Sum II for each (i, a) pair, and target is always 0. Also need to update left & right after match is found, because there can be multiple solutions, unlike 2Sum.',
+        'level': 'medium',
     },
     'Container With Most Water': {
         'category': 'two_pointers',
+        'problem_statement': 'You are given an integer array heights where heights[i] represents the height of the ithith bar.\n\nYou may choose any two bars to form a container. Return the maximum amount of water a container can store.',
+        'solution_summary': 'Start with l/r pointers at each end of array. While l < r, calculate area as min(h[l], h[r]) * (r - l). Store as max if greater than current result. Move whichever pointer has the smaller height.',
+        'level': 'medium',
     },
     'Trapping Rain Water': {
         'category': 'two_pointers',
+        'problem_statement': 'You are given an array of non-negative integers height which represent an elevation map. Each value height[i] represents the height of a bar, which has a width of 1.\n\nReturn the maximum area of water that can be trapped between the bars.',
+        'solution_summary': 'Start with l/r pointers at each end of array. leftMax and rightMax track highest values seen from l/r, initialize with end values. While l < r, if leftMax < rightMax - move l += 1, update leftMax, result += leftMax - current height. Otherwise, do same for right.',
+        'level': 'hard',
     },
 
     # sliding window
@@ -587,10 +604,20 @@ def quiz(incorrect_questions=set()):
         click.secho('Bye!')
         return
 
-    
 
             
 
 
 if __name__ == '__main__':
-    quiz()
+    opts, args = getopt.getopt(sys.argv[1:], "t:", ["problem_types="])
+    problem_types = []
+    for o, v in opts:
+        if o == '--problem_types':
+            problem_types = v.split(',')
+    problems = set()
+    for k in PROBLEM_TO_CATEGORY:
+        problem = PROBLEM_TO_CATEGORY[k]
+        if 'category' in problem and problem['category'] in problem_types:
+            problems.add(k)
+    
+    quiz(problems)
