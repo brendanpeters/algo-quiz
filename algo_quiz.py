@@ -101,12 +101,21 @@ PROBLEM_TO_CATEGORY = {
     # sliding window
     'Best Time to Buy And Sell Stock': {
         'category': 'sliding_window',
+        'problem_statement': 'You are given an integer array prices where prices[i] is the price of NeetCoin on the ith day.\n\nYou may choose a single day to buy one NeetCoin and choose a different day in the future to sell it.\n\nReturn the maximum profit you can achieve. You may choose to not make any transactions, in which case the profit would be 0.',
+        'solution_summary': 'Start with l = 0, r = 1. Move r forward every iteration until the end of array. At every iteration, if there is a profit from prices[l] to prices[r], update maxProfit. Otherwise, move l up to r position.',
+        'level': 'easy',
     },
     'Longest Substring Without Repeating Characters': {
         'category': 'sliding_window',
+        'problem_statement': 'Given a string s, find the length of the longest substring without duplicate characters.\n\nA substring is a contiguous sequence of characters within a string.',
+        'solution_summary': 'Start with l = 0, r = 0. Increment r once per iteration. Use hashset to keep track of characters in current window. If s[r] is already in set, move l forward until character is removed from set. Then add s[r] and update maxLen with r - l + 1.',
+        'level': 'medium',
     },
     'Longest Repeating Character Replacement': {
         'category': 'sliding_window',
+        'problem_statement': 'You are given a string s consisting of only uppercase english characters and an integer k. You can choose up to k characters of the string and replace them with any other uppercase English character.\n\nAfter performing at most k replacements, return the length of the longest substring which contains only one distinct character.',
+        'solution_summary': '',
+        'level': 'medium',
     },
     'Permutation In String': {
         'category': 'sliding_window',
@@ -164,6 +173,9 @@ PROBLEM_TO_CATEGORY = {
     # linked list
     'Reverse Linked List': {
         'category': 'linked_list',
+        'problem_statement': 'Given the beginning of a singly linked list head, reverse the list, and return the new beginning of the list.',
+        'solution_summary': 'Start with cur = head, prev = None. While cur, nxt = cur.next; cur.next = prev; prev = cur; cur = nxt. Return prev.',
+        'level': 'easy',
     },
     'Merge Two Sorted Lists': {
         'category': 'linked_list',
@@ -269,27 +281,51 @@ PROBLEM_TO_CATEGORY = {
     # backtracking
     'Subsets': {
         'category': 'backtracking',
+        'problem_statement': 'Given an array nums of unique integers, return all possible subsets of nums.\n\nThe solution set must not contain duplicate subsets. You may return the solution in any order.',
+        'solution_summary': 'DFS(curIndex). If curIndex >= len(nums), add copy of current subset list to result. Otherwise, add nums[curIndex] to subset and call DFS(curIndex + 1), then pop from nums and call DFS(curIndex + 1) again.',
+        'level': 'medium',
     },
     'Combination Sum': {
         'category': 'backtracking',
+        'problem_statement': 'You are given an array of distinct integers nums and a target integer target. Your task is to return a list of all unique combinations of nums where the chosen numbers sum to target.\n\nThe same number may be chosen from nums an unlimited number of times. Two combinations are the same if the frequency of each of the chosen numbers is the same, otherwise they are different.\n\nYou may return the combinations in any order and the order of the numbers in each combination can be in any order.',
+        'solution_summary': 'DFS(idx, cur, total). Use list for result set. Base case - If total == target, add copy of cur to result set and return. If idx >= len(nums) or total > target, return. Add nums[idx] to cur and call DFS(idx, cur, total + nums[idx]) (include current index). Then cur.pop() and call DFS(idx + 1, cur, total) (exclude current index)',
+        'level': 'medium',
     },
     'Combination Sum II': {
         'category': 'backtracking',
+        'problem_statement': 'You are given an array of integers candidates, which may contain duplicates, and a target integer target. Your task is to return a list of all unique combinations of candidates where the chosen numbers sum to target.\n\nEach element from candidates may be chosen at most once within a combination. The solution set must not contain duplicate combinations.\n\nYou may return the combinations in any order and the order of the numbers in each combination can be in any order.',
+        'solution_summary': 'DFS(idx, cur, total). Use hashset for result set. Base case - If total == target, add copy of cur to result set and return. If total > target or idx >= len(candidates), return. Add nums[idx] to cur and call DFS(idx, cur, total + candidates[idx]) (include current candidate). Then cur.pop() and can to next candidate that is not equal to the following candidate. Then call DFS(idx + 1, cur, total) (exlcude current candidate).',
+        'level': 'medium',
     },
     'Permutations': {
         'category': 'backtracking',
+        'problem_statement': 'Given an array nums of unique integers, return all the possible permutations. You may return the answer in any order.',
+        'solution_summary': 'DFS(perm, pick). Base case - If len(perm) == len(nums), we have constructed a permutation; add perm.copy() to result set and return. Otherwise, for each index in nums: if picks[i] is False, then perm.append(nums[i]), picks[i] = True, and backtrack(perm, pick). After backtrack, perm.pop and set pick[i] = False again. Return result set',
+        'level': 'medium',
     },
     'Subsets II': {
         'category': 'backtracking',
+        'problem_statement': 'You are given an array nums of integers, which may contain duplicates. Return all possible subsets.\n\nThe solution must not contain duplicate subsets. You may return the solution in any order.',
+        'solution_summary': 'DFS(i, subset). Base case - If i == len(nums), we have reached end of nums; add subset.copy() to result set and return. Otherwise, backtrack including current element: subset.append(nums[i]) -> backtrack(i, subset). Then backtrack excluding current element: subset.pop; iterate to next unique value, call backtrack(i + 1, subset). Return result set',
+        'level': 'medium',
     },
     'Generate Parentheses': {
         'category': 'backtracking',
+        'problem_statement': 'You are given an integer n. Return all well-formed parentheses strings that you can generate with n pairs of parentheses.',
+        'solution_summary': 'DFS(openN, closedN). Base case - If openN == closedN == n, we have found a solution; append to result list and return. If openN < n, then we try another ( -> push ( onto stack, call backtrack(openN + 1, closedN), and pop stack. If closedN < openN, then we try another ) -> push ) onto stack, call backtrack(openN, closedN + 1), and pop stack. Return result list',
+        'level': 'medium',
     },
     'Word Search': {
         'category': 'backtracking',
+        'problem_statement': 'Given a 2-D grid of characters board and a string word, return true if the word is present in the grid, otherwise return false.\n\nFor the word to be present it must be possible to form it with a path in the board with horizontally or vertically neighboring cells. The same cell may not be used more than once in a word.',
+        'solution_summary': 'DFS(idx, row, col). Base case -  if idx reaches end of word, return true. Use visited array. Check neighboring cells. Make sure to unset visited[row][col] after recursive calls.',
+        'level': 'medium',
     },
     'Palindrome Partitioning': {
         'category': 'backtracking',
+        'problem_statement': 'Given a string s, split s into substrings where every substring is a palindrome. Return all possible lists of palindromic substrings.\n\nYou may return the solution in any order.',
+        'solution_summary': '',
+        'level': 'medium',
     },
     'Letter Combinations of a Phone Number': {
         'category': 'backtracking',
@@ -518,9 +554,15 @@ PROBLEM_TO_CATEGORY = {
     # bit manipulation
     'Single Number': {
         'category': 'bits',
+        'problem_statement': 'You are given a non-empty array of integers nums. Every integer appears twice except for one.\n\nReturn the integer that appears only once.\n\nYou must implement a solution with O(n)O(n) runtime complexity and use only O(1)O(1) extra space.',
+        'solution_summary': 'Iterate through list and bitwise XOR all the numbers together. The result will be the single number.',
+        'level': 'easy',
     },
     'Number of 1 Bits': {
         'category': 'bits',
+        'problem_statement': 'You are given an unsigned integer n. Return the number of 1 bits in its binary representation.\n\nYou may assume n is a non-negative integer which fits within 32-bits.',
+        'solution_summary': '',
+        'level': 'easy',
     },
     'Counting Bits': {
         'category': 'bits',
