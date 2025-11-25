@@ -329,9 +329,15 @@ PROBLEM_TO_CATEGORY = {
     },
     'Letter Combinations of a Phone Number': {
         'category': 'backtracking',
+        'problem_statement': 'You are given a string digits made up of digits from 2 through 9 inclusive.\n\nEach digit (not including 1) is mapped to a set of characters as shown below:\n\nA digit could represent any one of the characters it maps to.\n\nReturn all possible letter combinations that digits could represent. You may return the answer in any order.',
+        'solution_summary': 'DFS(word), where word is a char array. Base case - if len(word) == len(digits), add word to results and return. Otherwise, get letters for current digit. For each letter, add letter to char array, dfs, and pop char array',
+        'level': 'medium',
     },
     'N Queens': {
         'category': 'backtracking',
+        'problem_statement': 'The n-queens puzzle is the problem of placing n queens on an n x n chessboard so that no two queens can attack each other.\n\nA queen in a chessboard can attack horizontally, vertically, and diagonally.\n\nGiven an integer n, return all distinct solutions to the n-queens puzzle.\n\nEach solution contains a unique board layout where the queen pieces are placed. 'Q' indicates a queen and '.' indicates an empty space.\n\nYou may return the answer in any order.',
+        'solution_summary': 'DFS(row). Base case - if row == n, it means we\'ve place a queen in each row and have found a solution. Otherwise, iterate throuch each column. If we have already blocked the current column, the positive diagonal (row + col) or the negative diagonal (row - col), then skip. Otherwise, mark col, pos diagonal, and neg diagonal as blocked, and DFS(row + 1)',
+        'level': 'hard',
     },
 
     # tries
